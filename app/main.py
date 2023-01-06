@@ -1,4 +1,3 @@
-from random import randrange
 import time
 
 from fastapi import FastAPI, Response, status, HTTPException, Depends
@@ -9,20 +8,11 @@ from psycopg2.extras import RealDictCursor
 from sqlalchemy.orm import Session
 
 from . import models
-from .database import engine, SessionLocal
+from .database import engine, get_db
 
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
-
-
-def get_db():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
-
 
 
 class Post(BaseModel):
@@ -47,27 +37,20 @@ while True:
 @app.get("/")
 def root():
     return {"message": "welcome to my api"}
-
-
-@app.get("/sqlalchemy")
-def test_posts(db: Session = Depends(get_db)):
-    return {"status": "success"}
     
 
-
 @app.get("/posts")
-def get_posts():
-    cursor.execute("""SELECT * FROM posts""")
-    posts = cursor.fetchall()
+def get_posts(db: Session = Depends(get_db)):
+    posts = db.query(models.Post).all()
     return {"data": posts}
 
 
 @app.post("/posts", status_code=status.HTTP_201_CREATED)
-def create_posts(post: Post):
-    cursor.execute("""INSERT INTO posts (title, content, published) VALUES (%s, %s, %s) RETURNING *""", 
-                   (post.title, post.content, post.published))
-    new_post = cursor.fetchone()
-    conn.commit()
+def create_posts(post: Post, db: Session = Depends(get_db)):
+    new_post = models.Post(**post.dict())
+    db.add(new_post)
+    db.commit()
+    db.refresh(new_post)
     return {"data": new_post}
 
 
@@ -75,11 +58,9 @@ def create_posts(post: Post):
 def get_post(id: int, response: Response):
     cursor.execute("""SELECT * FROM posts WHERE id = %s""", (id,))
     post = cursor.fetchone()
-
     if not post:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
                             detail=f"post with id: {id} was not found")
-
     return {"post_detail": post}
 
 
