@@ -1,4 +1,5 @@
 from datetime import datetime
+from typing import Literal
 
 from pydantic import BaseModel, EmailStr
 
@@ -17,10 +18,11 @@ class Post(PostBase):
     id: int
     created_at: datetime
     owner_id: int
-    owner: 'UserOut'
+    owner: "UserOut"
 
     class Config:
         orm_mode = True
+
 
 class UserCreate(BaseModel):
     email: EmailStr
@@ -50,6 +52,9 @@ class TokenData(BaseModel):
     id: str | None = None
 
 
-Post.update_forward_refs()
+class Vote(BaseModel):
+    post_id: int
+    dir: Literal[0, 1]
 
-    
+
+Post.update_forward_refs()
