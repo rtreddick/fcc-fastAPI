@@ -41,8 +41,9 @@ ACCESS_TOKEN_EXPIRE_MINUTES=30
 You can create the `SECRET_KEY` variable on the command line: `openssl rand -hex 32`.
 
 ## Start the local server
-
-`uvicorn app.main:app --reload`
-
+```
+. venv/bin/activate
+uvicorn app.main:app --reload`
+```
 
 

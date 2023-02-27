@@ -1,38 +1,19 @@
 # FreeCodeCamp.org fastAPI tutorial
 
-https://youtu.be/0sOvCWFmrtA
+# Building a social media API using FastAPI
 
-This tutorial focuses on creating an API for a social media site. It walks the student through setting up their development environment, setting up a local Postgres database, testing their API with Postman and the built-in Swagger docs, testing using Pytest, and finally deployment to multiple environments.
+I took this course to learn about building APIs, to practice Python development, and to learn about deploying applications.
 
-## Set up environment
+---
 
-### Create a virtual env and pip install requirements
+In this course, we build an API for a social media site that supports multiple users, posts by users, and voting on posts. The course covers the features of FastAPI library and the basics of designing an API, but it also teaches how to setup a **PostgreSQL** database, how to write tests with **Pytest**, how to **deploy** the API to different environments, including Heroku and a Linux server, and how to **Dockerize** the application. It also covers some advanced features of **Postman**. I have experience with many of these topics, but I was looking for more exposure to building an application end-to-end, i.e. I wanted to practice putting all the pieces together.
 
-```
-python -m venv venv
-source venv/bin/activate
-python -m pip install -r requirements.txt
-```
+## Credit to the author for this amazing course
 
-### Create .env file for local dev
-You'll need to create .env file with the following environment variables and place at the root of your project directory (on the same level as the app directory). This tutorial uses Postgres, so you'll need to set up a Postgres database on your local machine and provide the approriate values below.
+The course was authored by [Sanjeev Thiyagarajan](https://github.com/Sanjeev-Thiyagarajan/) for [FreeCodeCamp.org](https://github.com/Sanjeev-Thiyagarajan/) and distributed for free on [Youtube](https://www.youtube.com/watch?v=0sOvCWFmrtA&t=43609s). Clocking in at roughly 19 hours of play time, it is a really comprehensive and effective course.
 
-```
-DATABASE_HOSTNAME=localhost
-DATABASE_PORT=5432
-DATABASE_PASSWORD=
-DATABASE_NAME=
-DATABASE_USERNAME=
-SECRET_KEY=
-ALGORITHM=HS256
-ACCESS_TOKEN_EXPIRE_MINUTES=30
-```
+## Documentation website
 
-You can create the `SECRET_KEY` variable on the command line: `openssl rand -hex 32`.
-
-## Start the local server
-
-`uvicorn app.main:app --reload`
-
+I created a [website](https://timreddick.me/fcc-fastapi) to document what I learned during this course (as well as to practice building documenation websites). You can find more information about running this API on your local machine there.
 
 
