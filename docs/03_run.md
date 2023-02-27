@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Running the API locally
+title: Run the API locally
 nav_order: 3
 description: "How to start the server and view the docs"
-permalink: /running_the_api
+permalink: /run_the_api
 ---
 
 # Run the API locally

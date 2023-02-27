@@ -3,9 +3,6 @@ description: FastAPI tutorial provided by FreeCodeCamp.org
 theme: just-the-docs
 url: https://rtreddick.github.io/fcc-fastapi
 
-# logo: "/assets/images/fastapi-tutorial-logo.png"
-favico_ico: "assets/images/fastapi-tutorial-favicon.ico"
-
 aux_links:
   repo: https://github.com/rtreddick/fcc-fastapi
   timreddick.me: https://rtreddick.github.io
