@@ -12,6 +12,8 @@ permalink: /running_the_api
 Instructions for running this API on your local machine.
 {: .fs-6 .fw-300 }
 
+---
+
 If you want to clone the [repo](https://github.com/rtreddick/fcc-fastapi) and run this API locally, you can follow the instructions below to set up your environment and start the uvicorn server. When the server starts, it will display the path to the server running on local host. Visit the path *ip-address*/docs to view the built in Swagger docs.
 
 ## Set up environment

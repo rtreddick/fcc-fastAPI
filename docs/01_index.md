@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Home
+title: FastAPI Tutorial
 nav_order: 1
 description: "I'm working my way through this 20-hour mega tutorial on building an API"
 permalink: /

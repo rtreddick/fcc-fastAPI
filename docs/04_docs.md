@@ -12,6 +12,8 @@ permalink: /building_these_docs
 An opportunity to learn about Jekyll sites, GitHub pages, and project documentation.
 {: .fs-6 .fw-300 }
 
+---
+
 Of course one of the great features of FastAPI is that it automatically builds Swagger docs describing your API. This docs website was not created to duplicate effort, but rather to document the tutorial work itself and highlight some of the things I learned. Building these docs was an amazing learning experience in itself.
 
 ## Why go through the effort?
