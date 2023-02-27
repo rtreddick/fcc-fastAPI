@@ -1,1 +1,8 @@
-remote_theme: just-the-docs/just-the-docs
+title: Social Media API using FastAPI
+description: FastAPI tutorial provided by FreeCodeCamp.org
+theme: just-the-docs
+
+url: https://rtreddick.github.io/fcc-fastapi
+
+aux_links:
+  repo: https://github.com/rtreddick/just-the-docs-practice
