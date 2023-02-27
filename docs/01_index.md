@@ -14,8 +14,13 @@ I took this course to learn about building APIs, to practice Python development,
 
 ---
 
-{: .warning }
-This site is a work-in-progress. There is still more I'd like to document and fomratting I'd like to clean up. I'm using this course and this website as an opportunity to learn about creating project documentation and deploying websites to GitHub pages. See [Building the Docs](./building_to_docs.html). 
+{: .important }
+This site is a work-in-progress. There is still more I'd like to document and formatting I'd like to clean up. I'm using this course and this website as an opportunity to learn about creating project documentation and deploying websites to GitHub pages. See [Building the Docs](./building_to_docs.html).
+
+![](./assets/images/swagger-docs.png)
+
+{: .note }
+The API is not currently deployed publicly, so you have to run it locally to see the interactive Swagger docs. The screenshot above shows all the endpoints in the API. See [Running the API Locally](./running_the_api) to run on your local machine and see the live docs.
 
 In this course, we build an API for a social media site that supports multiple users, posts by users, and voting on posts. The course covers the features of FastAPI library and the basics of designing an API, but it also teaches how to setup a **PostgreSQL** database, how to write tests with **Pytest**, how to **deploy** the API to different environments, including Heroku and a Linux server, and how to **Dockerize** the application. It also covers some advanced features of **Postman**. I have experience with many of these topics, but I was looking for more exposure to building an application end-to-end, i.e. I wanted to practice putting all the pieces together.
 
