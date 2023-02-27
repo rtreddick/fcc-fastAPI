@@ -6,7 +6,7 @@ description: "I'm working my way through this 20-hour mega tutorial on building 
 permalink: /
 ---
 
-# Building a social media API using FastAPI
+# Build a social media API using FastAPI
 {: .fs-9}
 
 I took this course to learn about building APIs, to practice Python development, and to learn about deploying applications.

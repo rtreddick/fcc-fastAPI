@@ -6,7 +6,7 @@ description: "How to start the server and view the docs"
 permalink: /running_the_api
 ---
 
-# Running this API locally
+# Run the API locally
 {: .fs-9}
 
 Instructions for running this API on your local machine.
