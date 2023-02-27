@@ -1,8 +1,56 @@
-title: Social Media API using FastAPI
+title: fcc-fastapi
 description: FastAPI tutorial provided by FreeCodeCamp.org
 theme: just-the-docs
-
 url: https://rtreddick.github.io/fcc-fastapi
 
+# logo: "/assets/images/fastapi-tutorial-logo.png"
+favico_ico: "assets/images/fastapi-tutorial-favicon.ico"
+
 aux_links:
-  repo: https://github.com/rtreddick/just-the-docs-practice
+  repo: https://github.com/rtreddick/fcc-fastapi
+  timreddick.me: https://rtreddick.github.io
+
+aux_links_new_tab: false
+
+# nav_sort: case_sensitive
+nav_external_links:
+  - title: FastAPI
+    url: https://fastapi.tiangolo.com/
+  - title: FreeCodeCamp.org
+    url: https://www.freecodecamp.org/
+  - title: Tutorial on YouTube
+    url: https://www.youtube.com/watch?v=0sOvCWFmrtA&t=43608s
+
+# Footer content
+# appears at the bottom of every page's main content
+
+back_to_top: true
+back_to_top_text: "Back to top"
+footer_content: "FastAPI tutorial"
+last_edit_timestamp: true
+last_edit_time_format: "%b %e %Y at %I:%M %p"
+gh_edit_link: true
+gh_edit_link_text: "Edit this page on GitHub"
+gh_edit_repository: "https://github.com/rtreddick/fcc-fastapi"
+gh_edit_branch: "main" # the branch that your docs is served from
+gh_edit_source: docs # the source that your files originate from
+gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
+
+color_scheme: nil
+
+callouts_level: quiet # or loud
+callouts:
+  highlight:
+    color: yellow
+  important:
+    title: Important
+    color: blue
+  new:
+    title: New
+    color: green
+  note:
+    title: Note
+    color: purple
+  warning:
+    title: Warning
+    color: red
