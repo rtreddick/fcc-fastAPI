@@ -1,5 +1,3 @@
-# FreeCodeCamp.org fastAPI tutorial
-
 # Building a social media API using FastAPI
 
 I took this course to learn about building APIs, to practice Python development, and to learn about deploying applications.
